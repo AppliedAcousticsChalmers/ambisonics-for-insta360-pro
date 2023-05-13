@@ -8,7 +8,10 @@ The folder `3d_model` comprises resources related to the design of the microphon
 
 When using these resources, please cite the following paper in which we presented the prototype for the very first time:
 
-    J. Ahrens and K. Jaruszewska, "Case Study of Equipping a High-Fidelity 360 Camera with a 4th-Order Equatorial Ambisonic Microphone Array," 154th Convention of the AES, Espoo, Finland (2023). [pdf](https://research.chalmers.se/publication/535721/file/535721_Fulltext.pdf)
+    J. Ahrens and K. Jaruszewska, "Case Study of Equipping a High-Fidelity 360 Camera 
+    with a 4th-Order Equatorial Ambisonic Microphone Array," 154th Convention of the AES, Espoo, Finland (2023). 
+    
+Find a pdf of the paper [here](https://research.chalmers.se/publication/535721/file/535721_Fulltext.pdf).
 
 ## License
 The content of this repository is licensed under the terms of the MIT license. Please consult the file [LICENSE](LICENSE) for more information about this license.

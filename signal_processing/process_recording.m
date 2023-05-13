@@ -68,13 +68,30 @@ else
     
 end
 
+% ---------------------- Store the ambisonic signals ----------------------
 
+% % The ambi_signals are in N3D format with ACN. Uncomment this to convert 
+% % them to SN3D if you want that. But note that the binaural rendering in 
+% % MATLAB will not work anymore because it assumes N3D.
+%
+% for n = 0 : N
+%     for m = -n : n
+%         ambi_signals(:, n^2+n+m+1) = ambi_signals(:, n^2+n+m+1) ./ sqrt(2*n+1);
+%     end
+% end
 
+% normalize
+max_value    = max(abs(ambi_signals(:)));
+weight       = 0.99 / max_value(1);
+ambi_signals = ambi_signals .* weight;
+
+audiowrite('insta360_demo_ambisonics.wav', ambi_signals, fs, 'BitsPerSample', 24);
 
 % --------------------------- Render binaurally ---------------------------
 
 if strcmp(eq_type, 'manual') || strcmp(eq_type, 'none') 
 
+    % Works only in N3D
     out_binaural = render_ambi_signals_binaurally_t(ambi_signals, head_orientation_rad, N, 'transform_integral');
 
 elseif strcmp(eq_type, 'freefield+MagLS')
@@ -107,6 +124,7 @@ elseif strcmp(eq_type, 'freefield+MagLS')
 
     fprintf('done.\n');
     
+    % Works only in N3D
     out_binaural = binauralDecode(ambi_signals, fs, magls_filters_left, magls_filters_right, fs);
 
 else
@@ -119,20 +137,6 @@ out_binaural = out_binaural / max(abs(out_binaural(:))) * 0.99;
 
 % store
 audiowrite('insta360_demo_binaural.wav', out_binaural, fs);
-    
-% ---------------------- Store the ambisonic signals ----------------------
- 
-% % convert from N3D to SN3D if you want that
-% for n = 0 : N
-%     for m = -n : n
-%         ambi_signals(:, n^2+n+m+1) = ambi_signals(:, n^2+n+m+1) ./ sqrt(2*n+1);
-%     end
-% end
 
-% normalize
-max_value    = max(abs(ambi_signals(:)));
-weight       = 0.99 / max_value(1);
-ambi_signals = ambi_signals .* weight;
 
-audiowrite('insta360_demo_ambisonics.wav', ambi_signals, fs, 'BitsPerSample', 24);
 

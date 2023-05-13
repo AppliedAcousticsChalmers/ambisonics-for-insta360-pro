@@ -1,6 +1,6 @@
 # The Microphone Mount
 
-![microphone_mount](pics/microphone_mount "microphone_mount")
+![microphone_mount](pics/microphone_mount.png "microphone_mount")
 
 This folder comprises the 3D model of the microphone mount, which was created in SketchUp and 3D printed. The mount is designed for 9 pcs. of Røde Lavalier GO omnidirectional lapel microphones. To fit the microphones into the mount, wrap the microphone bodies 1.5 times with eletrical tape such that the edge of the tape coincides with the step of the radius of the cylindrical microphone body that occurs at the pull relief. See the following picture:
 
