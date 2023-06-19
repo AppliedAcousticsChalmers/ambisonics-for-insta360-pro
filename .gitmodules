@@ -1,3 +1,3 @@
 [submodule "signal_processing/eMagLS"]
 	path = signal_processing/eMagLS
-	url = https://github.com/thomasdeppisch/eMagLS
+	url = https://github.com/thomasdeppisch/eMagLS.git
