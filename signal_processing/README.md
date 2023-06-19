@@ -28,7 +28,7 @@ We therefore need to take into account only the spatial aliasing. To do that, we
 
 ![diffuse_eq](resources/diffuse_eq.png "diffuse_eq")
 
-The filter is stored in the file `data/diffuse_eq_Insta360.mat`.
+The filter is stored in the file `resources/diffuse_eq_Insta360.mat`.
 
 Done! This way, we equalised the array, and the rendering is equalized via MagLS. Check the script `render_recording.m` for the complete pipeline. You'll need to download the employed HRIRs from [here](https://zenodo.org/record/3928297/files/HRIR_L2702.sofa?download=1) and store them in the subfolder `eMagLS/resources` (The MATLAB script is going to do that automatically for you.) as well as the SOFA MATLAB API from [here](https://sourceforge.net/projects/sofacoustics/) for being able to compute the binaural output yourself. The ambisonic encoding works either way.
 
