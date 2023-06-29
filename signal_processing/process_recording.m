@@ -2,7 +2,9 @@
 
 clear;
 
-addpath(genpath('eMagLS/')); % This includes https://github.com/AppliedAcousticsChalmers/ambisonic-encoding.git as a submodule
+% submodules
+addpath(genpath('eMagLS/'));
+addpath('ambisonic-encoding/dependencies/');
 
 eq_type = 'manual'; % This one is used in the video
 %eq_type = 'freefield+MagLS'; % use this if you want to render in Reaper

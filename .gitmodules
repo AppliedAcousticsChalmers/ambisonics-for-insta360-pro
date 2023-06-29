@@ -1,3 +1,6 @@
 [submodule "signal_processing/eMagLS"]
 	path = signal_processing/eMagLS
 	url = https://github.com/thomasdeppisch/eMagLS.git
+[submodule "signal_processing/ambisonic-encoding"]
+	path = signal_processing/ambisonic-encoding
+	url = https://github.com/AppliedAcousticsChalmers/ambisonic-encoding.git
