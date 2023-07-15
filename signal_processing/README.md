@@ -11,7 +11,7 @@ The signal processing that we apply to the raw microphone signals is therefore i
     J. Ahrens, "Ambisonic Encoding of Signals From Equatorial Microphone Arrays," 
     Technical note v. 1, Chalmers University of Technology, Aug. 2022.
 
-[(pdf)](https://arxiv.org/pdf/2211.00584.pdf) and implemented it in https://github.com/AppliedAcousticsChalmers/ambisonic-encoding. The difference in the present case is that we additionally perform an equalization of the processing pipeline with respect to the spectral balance of the binaural output signals. Actually, we provide you with two alternative equalizations here.
+[(pdf)](https://arxiv.org/pdf/2211.00584.pdf) and to what is implemented in https://github.com/AppliedAcousticsChalmers/ambisonic-encoding. The difference in the present case is that we additionally perform an equalization of the processing pipeline with respect to the spectral balance of the binaural output signals. Actually, we provide you with two alternative equalizations here.
 
 ## Diffuse-Field Equalisation of the Array Plus MagLS Rendering
 
@@ -42,4 +42,4 @@ We do the plain SH decomposition and binaural rendering as described in the pape
 
 ![shelving_eq](resources/shelving_eq.png "shelving_eq")
 
-See the script `render_recording.m` allows you to set flags such that this equalization is performed instead of diffuseEQ+MagLS.
+The script `render_recording.m` allows you to set flags such that this equalization is performed instead of diffuseEQ+MagLS.
